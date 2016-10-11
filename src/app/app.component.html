@@ -1,0 +1,4 @@
+  <input type="checkbox" #enabled value="{{isOn}}" (change)="isOn=$event.target.checked" />
+  <textarea type="text" #text placeholder="treść popupa"></textarea>
+  <br />
+  <button (click)="update(enabled.value, text.value)">Zapisz</button>
