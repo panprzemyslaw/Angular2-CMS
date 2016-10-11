@@ -21,7 +21,8 @@ const ContextReplacementPlugin = require('webpack/lib/ContextReplacementPlugin')
  */
 const HMR = helpers.hasProcessFlag('hot');
 const METADATA = {
-  title: 'Angular2 Webpack Starter by @gdi2290 from @AngularClass',
+  title: 'Parma Pizza Admin',
+  description: 'Parma Pizza Admin Panel',
   baseUrl: '/',
   isDevServer: helpers.isWebpackDevServer()
 };
