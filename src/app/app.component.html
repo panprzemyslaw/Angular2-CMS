@@ -1,4 +1,15 @@
+<div *ngIf="!isLoggedIn">
+    <input type="text" id="username" #username placeholder="login" />
+    <input type="text" id="password" #password placeholder="password" />
+  <br />
+  <button (click)="login(username.value, password.value)">Login</button>        
+</div>    
+<div *ngIf="isLoggedIn">
+  <div class="logout-box">
+    <button (click)="logout()">Logout</button>         
+  </div>      
   <input type="checkbox" #enabled value="{{isOn}}" (change)="isOn=$event.target.checked" />
-  <textarea type="text" #text placeholder="treść popupa"></textarea>
+  <textarea type="text" #text placeholder="treść popupa">{{popup.text}}</textarea>
   <br />
   <button (click)="update(enabled.value, text.value)">Zapisz</button>
+</div>  

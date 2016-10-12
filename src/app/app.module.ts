@@ -2,7 +2,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { platformBrowserDynamic } from '@angular/platform-browser-dynamic';
 import { NgModule } from '@angular/core';
 import { AppComponent } from './app.component';
-import { AngularFireModule } from 'angularfire2';
+import { AngularFireModule, AngularFire, AuthProviders, AuthMethods } from 'angularfire2';
 
 // Must export the config
 export const firebaseConfig = {
@@ -12,10 +12,15 @@ export const firebaseConfig = {
   storageBucket: 'parma-admin.appspot.com'
 };
 
+const myFirebaseAuthConfig = {
+    provider: AuthProviders.Password,
+    method: AuthMethods.Password,
+}
+
 @NgModule({
   imports: [
     BrowserModule,
-    AngularFireModule.initializeApp(firebaseConfig)
+    AngularFireModule.initializeApp(firebaseConfig, myFirebaseAuthConfig)
   ],
   declarations: [ AppComponent ],
   bootstrap: [ AppComponent ]
