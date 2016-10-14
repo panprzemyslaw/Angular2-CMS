@@ -9,13 +9,21 @@ import { AngularFire, FirebaseObjectObservable } from 'angularfire2';
 export class AppComponent {
   popup: FirebaseObjectObservable<any>;
   isOn: boolean;
+  content: string;
   isLoggedIn: boolean = false;
   constructor(public af: AngularFire) {
     this.af.auth.subscribe(auth => { 
         console.log('auth ', auth);
         this.isLoggedIn = auth && auth.uid ? true : false;
     });      
-    this.popup = af.database.object('/popup');
+    this.popup = af.database.object('/popup', { preserveSnapshot: true });
+    this.popup.subscribe(snapshot => {
+      this.isOn = snapshot.val().enable;
+      this.content = snapshot.val().text;
+      console.log('isOn ', this.isOn);
+      console.log('text', this.content);            
+    });    
+    console.debug('popup ', this.popup);
     this.isOn = false;
   }
 
@@ -30,8 +38,8 @@ export class AppComponent {
     this.af.auth.logout();
   }
 
-  update(enabled: string, text: string) {
-    console.debug('updating ', enabled, text);
-    this.popup.update({ enable: enabled, text: text });
+  update(text: string) {
+    console.debug('updating ', this.isOn, text);
+    this.popup.update({ enable: this.isOn, text: text });
   }
 }
