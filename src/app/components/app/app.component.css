@@ -11,7 +11,7 @@ html, body{
   float: left;
 }
 
-right {
+.right {
   float: right;
 }
 
@@ -132,22 +132,6 @@ button:hover {
 .main .content {
   position: relative;
   padding-left: 35px;
-}
-
-.main .content .login-box {
-  margin: 20px 0 0 280px;
-}
-
-.main .content .login-box button {
-  margin: 20px 20px 0 0;
-}
-
-.main .content .login-box input {
-  padding: 5px;
-  margin-right: 10px;
-  font-size: 14px;
-  border: none;
-  border-radius: 5px;
 }
 
 .main .content button {

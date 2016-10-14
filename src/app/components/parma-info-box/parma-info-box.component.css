@@ -1,0 +1,67 @@
+html, body{
+  height: 100%;
+  font-family: Arial, Helvetica, sans-serif
+}
+
+.clear {
+  clear: both;
+}
+
+.left {
+  float: left;
+}
+
+.right {
+  float: right;
+}
+
+input[type="checkbox"] {
+  width: 15px;
+  height: 15px;
+}
+
+.form-elem {
+  margin-top: 10px;
+}
+
+.form-elem input {
+  margin-right: 10px;
+}
+
+.form-elem label {
+  float: left;
+  font-size: 14px;
+  width: 80px;
+}
+
+button {
+  background: #e52454;
+  color: white;
+  padding: 10px 25px 10px 25px;
+  border: none;  
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 12px;
+}
+
+button:hover {
+  background: white;
+  color: #e52454;
+}
+
+#activate{
+  float: left;
+}
+
+.popupContent * {
+  float: left;
+}
+
+.popupContent textarea {
+  background: #93c5ff;
+  border: none;
+  width: 500px;
+  height: 250px;
+  padding: 5px;
+  border-radius: 5px;
+}

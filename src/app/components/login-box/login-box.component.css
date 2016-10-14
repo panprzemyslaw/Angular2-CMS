@@ -1,0 +1,44 @@
+button {
+  background: #e52454;
+  color: white;
+  padding: 10px 25px 10px 25px;
+  border: none;  
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 12px;
+}
+
+button:hover {
+  background: white;
+  color: #e52454;
+}
+
+.clear {
+  clear: both;
+}
+
+.left {
+  float: left;
+}
+
+.right {
+  float: right;
+}
+
+/******/
+
+.login-box {
+  margin: 20px 0 0 280px;
+}
+
+.login-box button {
+  margin: 20px 20px 0 0;
+}
+
+.login-box input {
+  padding: 5px;
+  margin-right: 10px;
+  font-size: 14px;
+  border: none;
+  border-radius: 5px;
+}
