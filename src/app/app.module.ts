@@ -40,6 +40,7 @@ const myFirebaseAuthConfig = {
 
 const routes: Routes = [
   { path: '', redirectTo: 'info', pathMatch: 'full' },
+  { path: 'login', component: LoginBoxComponent},  
   { path: 'info', component: ParmaInfoComponent, canActivate: [LoggedInGuard] },
   { path: 'menu', component: ParmaMenuComponent, canActivate: [LoggedInGuard] },
   { path: 'promocje', component: ParmaPromoComponent, canActivate: [LoggedInGuard] }    

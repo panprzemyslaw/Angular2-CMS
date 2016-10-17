@@ -1,14 +1,12 @@
 import { Injectable } from '@angular/core';
 import { AngularFire } from 'angularfire2';
+import { Router } from '@angular/router';
 
 @Injectable()
 export class AuthService {
-  isLoggedIn: boolean;
-  constructor(public af: AngularFire) {
-    this.isLoggedIn = false;      
+  constructor(private router: Router, public af: AngularFire) {      
     this.af.auth.subscribe(auth => { 
         console.log('auth ', auth);
-        this.isLoggedIn = auth && auth.uid ? true : false;
     });      
   }
 
@@ -17,15 +15,14 @@ export class AuthService {
     email: username,
     password: pass,
     });
+    this.router.navigate(['info']);     
   }
 
   logout(): void {
+    this.router.navigate(['login']);      
     this.af.auth.logout();
   }
-
-  isUserLoggedIn(): boolean {
-    return this.isLoggedIn;
-  }  
+ 
 }
 
 export var AUTH_PROVIDERS: Array<any> = [

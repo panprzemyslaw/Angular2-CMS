@@ -1,12 +1,12 @@
 <div class="main">
   <div class="header">
     <h1>PARMA PIZZA - ADMIN PANEL</h1>
-    <div *ngIf="isLoggedIn" class="save-box">
+    <div class="save-box">
       <button (click)="update(popupContent.value)">Zapisz</button>
     </div>      
-      <logout-box *ngIf="isLoggedIn"></logout-box>    
+      <logout-box></logout-box>    
   </div>  
-  <div *ngIf="isLoggedIn" class="menu left">
+  <div class="menu left">
     <ul>
       <li><a class="active" href="#info">INFO</a></li>
       <li><a href="#menu">MENU</a></li>
@@ -15,7 +15,6 @@
   </div>  
 
   <div class="content left">
-   <login-box *ngIf="!isLoggedIn"></login-box> 
    <router-outlet></router-outlet>
   </div>
 </div>  
