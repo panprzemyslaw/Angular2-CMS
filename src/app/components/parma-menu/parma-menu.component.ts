@@ -5,7 +5,8 @@ import {Component} from '@angular/core';
 
 @Component({
   selector: 'parma-menu',
-  template: `<h1>Menu</h1>`
+  templateUrl: 'parma-menu.component.html',
+  styleUrls: ['parma-menu.component.css']
 })
 export class ParmaMenuComponent {
 }

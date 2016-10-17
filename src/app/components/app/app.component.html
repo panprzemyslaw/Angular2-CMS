@@ -1,20 +1,7 @@
 <div class="main">
   <div class="header">
-    <h1>PARMA PIZZA - ADMIN PANEL</h1>
-    <div class="save-box">
-      <button (click)="update(popupContent.value)">Zapisz</button>
-    </div>      
-      <logout-box></logout-box>    
+    <h1>PARMA PIZZA - ADMIN PANEL</h1>     
+    <logout-box *ngIf="isLoggedIn"></logout-box>    
   </div>  
-  <div class="menu left">
-    <ul>
-      <li><a class="active" href="#info">INFO</a></li>
-      <li><a href="#menu">MENU</a></li>
-      <li><a href="#promocje">PROMOCJE</a></li>
-    </ul>  
-  </div>  
-
-  <div class="content left">
    <router-outlet></router-outlet>
-  </div>
 </div>  

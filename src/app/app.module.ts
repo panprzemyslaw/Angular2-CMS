@@ -24,6 +24,7 @@ import { ParmaMenuComponent } from './components/parma-menu/parma-menu.component
 import { ParmaPromoComponent } from './components/parma-promo/parma-promo.component';
 import { LoginBoxComponent } from './components/login-box/login-box.component';
 import { LogoutBoxComponent } from './components/logout-box/logout-box.component';
+import { NavigationComponent } from './components/navigation/navigation.component';
 
 // Must export the config
 export const firebaseConfig = {
@@ -58,7 +59,8 @@ const routes: Routes = [
     LogoutBoxComponent,
     ParmaInfoComponent,
     ParmaPromoComponent,
-    ParmaMenuComponent ],
+    ParmaMenuComponent,
+    NavigationComponent ],
   bootstrap: [ AppComponent ],
   providers: [
     AUTH_PROVIDERS,

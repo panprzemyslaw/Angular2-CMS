@@ -1,12 +1,20 @@
-<div>
-    <div id="activate" class="form-elem">
-    <label for="activation">Aktywuj</label>            
-    <input type="checkbox" id="activation" #enabled value="{{isOn}}" (change)="isOn=$event.target.checked" />
+<div class="save-box">
+    <button (click)="update(popupContent.value)">Zapisz</button>
+</div> 
+
+<navigation></navigation>
+
+<div class="content left">
+    <div>
+        <div id="activate" class="form-elem">
+            <label for="activation">Aktywuj</label>            
+            <input type="checkbox" id="activation" #enabled value="{{isOn}}" (change)="isOn=$event.target.checked" />
+        </div>
+        <div class="clear"></div>
+        <div class="popupContent form-elem">
+            <label for="popupContent">Treść</label>
+            <textarea id="popupContent" type="text" #popupContent placeholder="treść popupa">{{ content }}</textarea>
+        </div>
+        <br />
     </div>
-    <div class="clear"></div>
-    <div class="popupContent form-elem">
-    <label for="popupContent">Treść</label>
-    <textarea id="popupContent" type="text" #popupContent placeholder="treść popupa">{{ content }}</textarea>
-    </div>
-    <br />
 </div>

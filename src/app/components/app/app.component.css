@@ -63,47 +63,12 @@ button:hover {
   border-radius: 5px;
 }
 
-.main .menu {
-  background: #e52454;
-  padding: 5px;
-  border-radius: 5px;
-  font-size: 14px;
-}
-
-.main .menu ul {
-  padding: 0;
-  list-style: none;
-}
-
-.main .menu a {
-  display: block;
-  width: 150px;
-  text-align: center;
-  padding: 5px 0px 5px 0px;
-  margin-bottom: 5px;
-  text-decoration: none;
-  color: white;
-}
-
-.main .menu a.active,
-.main .menu a:hover {
-  background: white;
-  color: #e52454;
-  border-radius: 5px;
-}
-
 .main h1 {
   text-align: center;
   border-bottom: 1px solid #93c5ff;
   color: white;
   padding-bottom: 15px;
   font-size: 20px;
-}
-
-.main .save-box {
-  position: absolute;
-  top: 10px;
-  right: 115px;
 }
 
 .main .content {

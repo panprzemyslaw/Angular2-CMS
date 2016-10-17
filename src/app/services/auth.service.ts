@@ -4,9 +4,15 @@ import { Router } from '@angular/router';
 
 @Injectable()
 export class AuthService {
+  isLoggedIn: boolean;
+
   constructor(private router: Router, public af: AngularFire) {      
     this.af.auth.subscribe(auth => { 
         console.log('auth ', auth);
+        this.isLoggedIn = auth && auth.uid ? true : false;
+        if (this.isLoggedIn) {
+            this.router.navigate(['info']);  
+        }
     });      
   }
 
@@ -14,8 +20,7 @@ export class AuthService {
     this.af.auth.login({
     email: username,
     password: pass,
-    });
-    this.router.navigate(['info']);     
+    });   
   }
 
   logout(): void {
