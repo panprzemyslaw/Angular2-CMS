@@ -1,10 +1,6 @@
 import { Component } from '@angular/core';
 import { AngularFire, FirebaseObjectObservable } from 'angularfire2';
 
-/*
- * Services
- */
-import {AuthService} from '../../services/auth.service';
 
 @Component({
   selector: 'parma-info',
@@ -17,7 +13,7 @@ export class ParmaInfoComponent {
   isOn: boolean;
   content: string;
 
-  constructor(public af: AngularFire, public authService: AuthService) {   
+  constructor(public af: AngularFire) {   
     this.popup = af.database.object('/popup', { preserveSnapshot: true });
     this.popup.subscribe(snapshot => {
       this.isOn = snapshot.val().enable;

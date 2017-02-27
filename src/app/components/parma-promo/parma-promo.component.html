@@ -1,7 +1,25 @@
 <div class="save-box">
-    <button (click)="update(popupContent.value)">Zapisz</button>
+    <button (click)="update(homepage.value)">Zapisz</button>
 </div> 
 
 <navigation></navigation>
 
-<h1>Promocje</h1>
+<div class="content left">
+    <div>
+        <div class="form-elem">
+            <label for="homepage">Strona Główna</label>            
+            <input type="text" id="homepage" #homepage value="{{homePromoContent}}" />
+        </div>
+        <h2>Promocje</h2>
+        <ul>
+            <li *ngFor="let item of promos | async">
+                <input type="text" #updatetext [value]="item.text" class="promo-input" />
+                <button (click)="updateItem(item.$key, updatetext.value)">Update</button>
+                <button (click)="deleteItem(item.$key)">Delete</button>
+            </li>
+        </ul>
+        <input type="text" #newitem />
+        <button (click)="addItem(newitem.value)">Add</button>
+        <button (click)="deleteEverything()">Delete All</button>        
+    </div>
+</div>

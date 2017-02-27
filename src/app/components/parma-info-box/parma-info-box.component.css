@@ -20,6 +20,12 @@ input[type="checkbox"] {
   height: 15px;
 }
 
+input:focus,
+textarea:focus {
+    border: 2px solid #e52454 !important;
+    outline: none;
+}
+
 .form-elem {
   margin-top: 10px;
 }
